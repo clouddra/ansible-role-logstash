@@ -18,12 +18,14 @@
     owner: root
     group: root
     mode: 0644
+    force: yes
   with_items:
     - 10-syslog.conf
     - 11-nginx.conf
     - 12-apache.conf
     - 14-solr.conf
     - 15-drupal.conf
+    - 03-netcat.conf
   notify: restart logstash
 
 - name: Create Logstash configuration file for local syslog.
